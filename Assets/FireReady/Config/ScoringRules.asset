@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726af4718a539ec42aa7153730719282, type: 3}
+  m_Name: ScoringRules
+  m_EditorClassIdentifier: FireReady::FireReady.Config.ScoringRules
+  startScore: 100
+  weakAgentPerFire: 5
+  dangerousAgentPerUse: 20
+  alarmNotRaised: 10
+  electricalBeforePowerIsolated: 10
+  lowAimAccuracy: 10
+  aimAccuracyThreshold: 0.6
+  tooClosePerEvent: 5
+  emptiedWithFireBurning: 5
+  failedScoreCap: 40

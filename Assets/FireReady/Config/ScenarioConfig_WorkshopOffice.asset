@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 882ae66da989ef5459429c0ba88d380a, type: 3}
+  m_Name: ScenarioConfig_WorkshopOffice
+  m_EditorClassIdentifier: FireReady::FireReady.Config.ScenarioConfig
+  scenarioId: workshop_office
+  displayName: Workshop office fire
+  layoutPrefab:
+    m_AssetGUID: 56bb45b6d729a4149a468580fe212ba9
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  extinguisherPrefab:
+    m_AssetGUID: 023c0ac1ea14e9c41811b77da0e2b239
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  firePrefabs:
+  - fireClass: 0
+    prefab:
+      m_AssetGUID: 721497a71e411874695c7cc953ba14a7
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    profile: {fileID: 11400000, guid: aefae840873203d45af76e0e226ae3f6, type: 2}
+  - fireClass: 1
+    prefab:
+      m_AssetGUID: 75e9d4a6af867d14ea60179c0d94b64e
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    profile: {fileID: 11400000, guid: 5961a31695d3dca46a3a12b151aff303, type: 2}
+  - fireClass: 2
+    prefab:
+      m_AssetGUID: ffc275ad9c5b7b747a9437ca9392381b
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    profile: {fileID: 11400000, guid: 8e60130f7a065e945b26bb3b2c6d72da, type: 2}
+  effectsLabel: effects
+  fires:
+  - id: bin
+    displayName: paper bin
+    fireClass: 0
+    spawnPointId: bin
+    ignitionTime: 0
+  - id: fuel
+    displayName: fuel spill
+    fireClass: 1
+    spawnPointId: fuel
+    ignitionTime: 20
+  - id: board
+    displayName: extension board
+    fireClass: 2
+    spawnPointId: board
+    ignitionTime: 40
+  extinguishers:
+  - {fileID: 11400000, guid: 9a6915242e9321e43ad7ff201e1e682e, type: 2}
+  - {fileID: 11400000, guid: b05970e67a07c74428e971dbe6a1f4a3, type: 2}
+  - {fileID: 11400000, guid: 3802019639c38484f8ff98fff5b3ce2c, type: 2}
+  - {fileID: 11400000, guid: 54abe967c6a5d954e935c67d1171ae5e, type: 2}
+  rules:
+    safeDistance: {x: 1, y: 2.5}
+    tooCloseSeconds: 3
+    offBaseFactor: 0.25
+    weakFactor: 0.6
+    outOfControlFailSeconds: 10
+    interactionReach: 2.2
+  scoring: {fileID: 11400000, guid: 7849172b91f6589468e36d0cda6addfb, type: 2}
+  audioCues: {fileID: 11400000, guid: a84da026a918e5b40954ba4549dd8107, type: 2}

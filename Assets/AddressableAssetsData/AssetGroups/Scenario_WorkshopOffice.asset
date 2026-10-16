@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Scenario_WorkshopOffice
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Scenario_WorkshopOffice
+  m_GUID: 943f1118bde69d846b9e61037d8758e8
+  m_SerializeEntries:
+  - m_GUID: 023c0ac1ea14e9c41811b77da0e2b239
+    m_Address: Scenario_WorkshopOffice/Extinguisher
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3802019639c38484f8ff98fff5b3ce2c
+    m_Address: Scenario_WorkshopOffice/Extinguishers/CO2Extinguisher
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 54abe967c6a5d954e935c67d1171ae5e
+    m_Address: Scenario_WorkshopOffice/Extinguishers/DrypowderExtinguisher
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 56bb45b6d729a4149a468580fe212ba9
+    m_Address: Scenario_WorkshopOffice/Layout
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5961a31695d3dca46a3a12b151aff303
+    m_Address: Scenario_WorkshopOffice/Fires/ClassB_FuelSpill
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 721497a71e411874695c7cc953ba14a7
+    m_Address: Scenario_WorkshopOffice/Fire_ClassA
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 75e9d4a6af867d14ea60179c0d94b64e
+    m_Address: Scenario_WorkshopOffice/Fire_ClassB
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7849172b91f6589468e36d0cda6addfb
+    m_Address: Scenario_WorkshopOffice/ScoringRules
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8e60130f7a065e945b26bb3b2c6d72da
+    m_Address: Scenario_WorkshopOffice/Fires/Electrical_Board
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9a6915242e9321e43ad7ff201e1e682e
+    m_Address: Scenario_WorkshopOffice/Extinguishers/WaterExtinguisher
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a84da026a918e5b40954ba4549dd8107
+    m_Address: Scenario_WorkshopOffice/AudioCues
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aefae840873203d45af76e0e226ae3f6
+    m_Address: Scenario_WorkshopOffice/Fires/ClassA_PaperBin
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b05970e67a07c74428e971dbe6a1f4a3
+    m_Address: Scenario_WorkshopOffice/Extinguishers/FoamExtinguisher
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: badef27c8b6f5114d8feae6e9772ffa4
+    m_Address: Scenario_WorkshopOffice/Config
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ffc275ad9c5b7b747a9437ca9392381b
+    m_Address: Scenario_WorkshopOffice/Fire_Electrical
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 69da65edf2591ab4280b0f16112cc3d7, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 187aebdafb2f12c49bdbdef19642a6e3, type: 2}
+    - {fileID: 11400000, guid: a12ccaedd08a19349999022e08e12cef, type: 2}

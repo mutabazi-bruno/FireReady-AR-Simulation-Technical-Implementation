@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Effects
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Effects
+  m_GUID: 0d6fc56851c886e469de64ad803d06b4
+  m_SerializeEntries:
+  - m_GUID: 433d11ff4acf99e46a86d186e8dd176f
+    m_Address: Effects/FX_SprayPuff
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - effects
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4bc244a4ee4297d40b40b1bc67e9a6c2
+    m_Address: Effects/FX_SteamBurst
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - effects
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6c16a787ba81df44aaf6c717414c3852
+    m_Address: Effects/FX_Splash
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - effects
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a2d7e1ff3e852484fbfc6b2190552bbd
+    m_Address: Effects/FX_SmokePuff
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - effects
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 69da65edf2591ab4280b0f16112cc3d7, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: f7d45ec14bd88b846a01771c2e161dbe, type: 2}
+    - {fileID: 11400000, guid: db2fc156a214039448b6f6c661699f67, type: 2}
