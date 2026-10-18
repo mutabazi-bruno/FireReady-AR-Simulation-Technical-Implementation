@@ -4,13 +4,13 @@ using UnityEngine;
 namespace FireReady.Simulation
 {
     /// <summary>
-    /// Drives flame size, smoke and glow from the fire's intensity. Visual only, it never changes the fire.
+    /// Drives flame size, emission and glow from the fire's intensity. Visual only, it never changes the fire.
+    /// Every particle system under the scale root is scaled together, so any fire effect prefab can be used.
     /// </summary>
     public class FireVisual : MonoBehaviour
     {
         [SerializeField] FireSource fire;
         [SerializeField] Transform scaleRoot;
-        [SerializeField] ParticleSystem flames;
         [SerializeField] ParticleSystem smoke;
         [SerializeField] Light glow;
         [SerializeField] float minScale = 0.35f;
@@ -18,7 +18,8 @@ namespace FireReady.Simulation
         [SerializeField] float maxGlow = 3f;
 
         ParticleSystem[] allSystems;
-        float flameRate;
+        ParticleSystem[] flameSystems;
+        float[] flameRates;
         float smokeRate;
         float currentScale;
         bool paused;
@@ -27,7 +28,12 @@ namespace FireReady.Simulation
         {
             if (fire == null) fire = GetComponentInParent<FireSource>();
             allSystems = GetComponentsInChildren<ParticleSystem>(true);
-            if (flames != null) flameRate = flames.emission.rateOverTimeMultiplier;
+
+            flameSystems = scaleRoot != null ? scaleRoot.GetComponentsInChildren<ParticleSystem>(true) : new ParticleSystem[0];
+            flameRates = new float[flameSystems.Length];
+            for (int i = 0; i < flameSystems.Length; i++)
+                flameRates[i] = flameSystems[i].emission.rateOverTimeMultiplier;
+
             if (smoke != null) smokeRate = smoke.emission.rateOverTimeMultiplier;
             ApplyScale(0f);
         }
@@ -67,10 +73,11 @@ namespace FireReady.Simulation
             currentScale = Mathf.MoveTowards(currentScale, targetScale, Time.deltaTime * 2f);
             ApplyScale(currentScale);
 
-            if (flames != null)
+            float emissionScale = burning ? 0.4f + t : 0f;
+            for (int i = 0; i < flameSystems.Length; i++)
             {
-                var emission = flames.emission;
-                emission.rateOverTimeMultiplier = burning ? flameRate * (0.4f + t) : 0f;
+                var emission = flameSystems[i].emission;
+                emission.rateOverTimeMultiplier = flameRates[i] * emissionScale;
             }
 
             if (smoke != null)

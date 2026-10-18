@@ -187,7 +187,12 @@ namespace FireReady.Simulation
                     if (band != null) band.material.color = config.bandColor;
             }
 
-            if (typeLabel != null) typeLabel.text = config.displayName.ToUpperInvariant();
+            if (typeLabel != null)
+            {
+                typeLabel.text = config.displayName.ToUpperInvariant();
+                // Dark text on light bands, white text on dark bands.
+                typeLabel.color = config.bandColor.grayscale > 0.5f ? new Color(0.08f, 0.08f, 0.08f) : Color.white;
+            }
 
             if (spray != null)
             {
