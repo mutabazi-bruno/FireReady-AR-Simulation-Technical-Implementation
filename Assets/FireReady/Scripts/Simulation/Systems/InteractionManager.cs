@@ -15,6 +15,7 @@ namespace FireReady.Simulation
     {
         [SerializeField] Camera arCamera;
         [SerializeField] Transform handAnchor;
+        [SerializeField] Transform nozzleAnchor;
         [SerializeField] EntityManager entityManager;
         [SerializeField] PoolManager pools;
         [SerializeField] LayerMask raycastMask = ~0;
@@ -76,7 +77,7 @@ namespace FireReady.Simulation
             if (held != null) DropHeld();
 
             held = extinguisher;
-            held.AttachTo(handAnchor);
+            held.AttachTo(handAnchor, nozzleAnchor);
             EventBus.Publish(new ExtinguisherSelected { Extinguisher = held });
         }
 

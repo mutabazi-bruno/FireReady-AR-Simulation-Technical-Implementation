@@ -22,6 +22,12 @@ namespace FireReady.Simulation
         [SerializeField] TMP_Text typeLabel;
         [SerializeField] Collider[] bodyColliders;
 
+        [Header("Hose (shown while held)")]
+        [SerializeField] Transform hoseStart;
+        [SerializeField] LineRenderer hose;
+        [SerializeField] GameObject heldNozzleVisual;
+        [SerializeField] float hoseSag = 0.12f;
+
         [Header("Held pose (child of the camera)")]
         [SerializeField] Vector3 heldPosition = new Vector3(0.13f, -0.24f, 0.42f);
         [SerializeField] Vector3 heldEuler = new Vector3(0f, -12f, 0f);
@@ -35,6 +41,10 @@ namespace FireReady.Simulation
         bool held;
         int burstId;
         float burstDuration;
+        Transform nozzleHome;
+        Vector3 nozzleHomePosition;
+        Quaternion nozzleHomeRotation;
+        readonly Vector3[] hosePoints = new Vector3[14];
 
         public ExtinguisherConfig Config => config;
         public AgentType Type => agent != null ? agent.Type : AgentType.Water;
@@ -82,13 +92,35 @@ namespace FireReady.Simulation
             if (!held) context.Interaction.Select(this);
         }
 
-        public void AttachTo(Transform hand)
+        void Awake()
+        {
+            if (nozzle != null)
+            {
+                nozzleHome = nozzle.parent;
+                nozzleHomePosition = nozzle.localPosition;
+                nozzleHomeRotation = nozzle.localRotation;
+            }
+            SetHoseVisible(false);
+        }
+
+        // The cylinder sits at the bottom of the view and the nozzle is held in front, like a real hose.
+        public void AttachTo(Transform hand, Transform nozzleAnchor = null)
         {
             held = true;
             transform.SetParent(hand, false);
             transform.localPosition = heldPosition;
             transform.localRotation = Quaternion.Euler(heldEuler);
             transform.localScale = Vector3.one * heldScale;
+
+            if (nozzle != null && nozzleAnchor != null)
+            {
+                nozzle.SetParent(nozzleAnchor, false);
+                nozzle.localPosition = Vector3.zero;
+                nozzle.localRotation = Quaternion.identity;
+                nozzle.localScale = Vector3.one;
+                SetHoseVisible(true);
+            }
+
             SetBodyCollidersEnabled(false);
             SetHighlighted(false);
         }
@@ -97,6 +129,14 @@ namespace FireReady.Simulation
         {
             StopDischarge();
             held = false;
+            if (nozzle != null && nozzleHome != null)
+            {
+                nozzle.SetParent(nozzleHome, false);
+                nozzle.localPosition = nozzleHomePosition;
+                nozzle.localRotation = nozzleHomeRotation;
+                nozzle.localScale = Vector3.one;
+            }
+            SetHoseVisible(false);
             if (standSlot != null)
             {
                 transform.SetParent(standSlot, false);
@@ -201,6 +241,36 @@ namespace FireReady.Simulation
                 var shape = spray.shape;
                 shape.angle = config.sprayAngle;
             }
+        }
+
+        void SetHoseVisible(bool visible)
+        {
+            if (hose != null) hose.enabled = visible;
+            if (heldNozzleVisual != null) heldNozzleVisual.SetActive(visible);
+        }
+
+        void LateUpdate()
+        {
+            if (!held || hose == null || hoseStart == null || nozzle == null) return;
+
+            // Curve the hose from the valve down and up to the nozzle in the hand.
+            var start = hoseStart.position;
+            var end = nozzle.position;
+            var control = (start + end) * 0.5f + Vector3.down * hoseSag;
+            int count = hosePoints.Length;
+            for (int i = 0; i < count; i++)
+            {
+                float t = i / (count - 1f);
+                hosePoints[i] = (1 - t) * (1 - t) * start + 2 * (1 - t) * t * control + t * t * end;
+            }
+            hose.positionCount = count;
+            hose.SetPositions(hosePoints);
+        }
+
+        void OnDestroy()
+        {
+            // While held the nozzle is parked under the camera, so take it with us.
+            if (held && nozzle != null) Destroy(nozzle.gameObject);
         }
 
         void SetBodyCollidersEnabled(bool enabled)
