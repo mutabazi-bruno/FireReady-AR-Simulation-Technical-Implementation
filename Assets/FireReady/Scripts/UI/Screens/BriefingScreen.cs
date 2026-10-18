@@ -95,7 +95,7 @@ namespace FireReady.UI
             foreach (var item in current.items)
                 items.Add().Set(item.icon, item.color, item.heading, item.text);
 
-            pageCounter.text = $"{page + 1} / {PageCount}";
+            pageCounter.text = $"BRIEFING {page + 1:00} / {PageCount:00}";
             nextLabel.text = page >= PageCount - 1 ? "Set up AR" : "Next";
             SetActive(skipButton, page < PageCount - 1);
         }

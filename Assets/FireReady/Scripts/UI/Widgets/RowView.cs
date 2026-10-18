@@ -12,6 +12,9 @@ namespace FireReady.UI
         [SerializeField] TMP_Text detail;
         [SerializeField] TMP_Text value;
         [SerializeField] Button button;
+        [Tooltip("Optional block behind the icon. When set, the colour goes on the block and the icon turns dark, like a safety sign.")]
+        [SerializeField] Image iconBlock;
+        [SerializeField] Color iconOnBlock = new Color(0.06f, 0.06f, 0.07f);
 
         public Button Button => button;
 
@@ -20,9 +23,10 @@ namespace FireReady.UI
             if (icon != null)
             {
                 icon.sprite = iconSprite;
-                icon.color = iconColor;
+                icon.color = iconBlock != null ? iconOnBlock : iconColor;
                 icon.enabled = iconSprite != null;
             }
+            if (iconBlock != null) iconBlock.color = iconColor;
 
             if (title != null) title.text = titleText;
 

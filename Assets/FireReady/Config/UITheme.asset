@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc41cdf308ce8d94db516ab5f94f0fba, type: 3}
   m_Name: UITheme
   m_EditorClassIdentifier: FireReady::FireReady.UI.UITheme
-  accent: {r: 0.9411765, g: 0.3529412, b: 0.15686275, a: 1}
-  success: {r: 0.20392157, g: 0.78039217, b: 0.34901962, a: 1}
-  warning: {r: 1, g: 0.6901961, b: 0.1254902, a: 1}
-  danger: {r: 1, g: 0.27058825, b: 0.22745098, a: 1}
-  info: {r: 0.3019608, g: 0.6392157, b: 1, a: 1}
-  textPrimary: {r: 1, g: 1, b: 1, a: 1}
-  textMuted: {r: 1, g: 1, b: 1, a: 0.6}
+  accent: {r: 1, g: 0.7607843, b: 0.05490196, a: 1}
+  success: {r: 0.078431375, g: 0.72156864, b: 0.3529412, a: 1}
+  warning: {r: 1, g: 0.5411765, b: 0, a: 1}
+  danger: {r: 0.8980392, g: 0.20392157, b: 0.16470589, a: 1}
+  info: {r: 0.18431373, g: 0.54901963, b: 1, a: 1}
+  textPrimary: {r: 0.95686275, g: 0.95686275, b: 0.9490196, a: 1}
+  textMuted: {r: 0.6392157, g: 0.654902, b: 0.6784314, a: 1}
   check: {fileID: 21300000, guid: 99103257c29331a46b2ba96d999ba545, type: 3}
   circle: {fileID: 21300000, guid: 345219232d172cb4caaee85928f9a8f1, type: 3}
   locked: {fileID: 21300000, guid: e02a9259a2654584dae15e766fbed513, type: 3}

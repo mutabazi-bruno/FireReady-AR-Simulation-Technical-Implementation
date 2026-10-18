@@ -38,6 +38,7 @@ namespace FireReady.UI
         [SerializeField] Button pullPinButton;
         [SerializeField] HoldButton sprayButton;
         [SerializeField] TMP_Text sprayLabel;
+        [SerializeField] Image sprayRing;
 
         [Header("Aim")]
         [SerializeField] Image reticle;
@@ -111,7 +112,7 @@ namespace FireReady.UI
             if (Sim == null) return;
 
             if (timerText != null) timerText.text = FormatTime(Sim.SessionTime);
-            if (firesText != null) firesText.text = $"{Sim.Entities.FiresRemaining} fires left";
+            if (firesText != null) firesText.text = Sim.Entities.FiresRemaining.ToString();
 
             if (held != null)
             {
@@ -122,6 +123,11 @@ namespace FireReady.UI
                     agentFill.color = fraction < 0.25f ? theme.danger : fraction < 0.5f ? theme.warning : theme.success;
                 }
                 if (agentText != null) agentText.text = held.IsEmpty ? "Empty" : $"{held.AgentRemaining:0.0} s left";
+                if (sprayRing != null)
+                {
+                    sprayRing.fillAmount = fraction;
+                    sprayRing.color = agentFill != null ? agentFill.color : theme.accent;
+                }
             }
         }
 
