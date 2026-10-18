@@ -14,7 +14,7 @@ Third-party assets used in FireReady AR. Each asset sits in its own folder under
 
 | Asset | Author | Source | License | Used for |
 |---|---|---|---|---|
-| Free Fire VFX (URP) | Vefects | [itch.io](https://vefects.itch.io/free-fire-vfx-unity-urp) | Free pack, terms on the itch.io page | Fire and smoke for the paper bin, fuel spill and extension board |
+| Free Fire VFX (URP) | Vefects | [itch.io](https://vefects.itch.io/free-fire-vfx-unity-urp) | Free pack, terms on the itch.io page | Fire and smoke for the paper bin, fuel spill and extension board. The flames shader was edited to remove a variable URP 17 already declares, which stopped it compiling. |
 
 ## Audio
 

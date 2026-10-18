@@ -306,7 +306,7 @@ Shader "SH_Vefects_VFX_URP_Fire_Flames_01"
 			sampler2D _Noise_01_Texture;
 			sampler2D _Noise_02_Texture;
 			sampler2D _TextureSample2;
-			uniform float4 _CameraDepthTexture_TexelSize;
+			// _CameraDepthTexture_TexelSize is already declared by URP 17
 
 
 			
@@ -621,7 +621,7 @@ Shader "SH_Vefects_VFX_URP_Fire_Flames_01"
 			sampler2D _Noise_01_Texture;
 			sampler2D _Noise_02_Texture;
 			sampler2D _TextureSample2;
-			uniform float4 _CameraDepthTexture_TexelSize;
+			// _CameraDepthTexture_TexelSize is already declared by URP 17
 
 
 			
@@ -910,7 +910,7 @@ Shader "SH_Vefects_VFX_URP_Fire_Flames_01"
 			sampler2D _Noise_01_Texture;
 			sampler2D _Noise_02_Texture;
 			sampler2D _TextureSample2;
-			uniform float4 _CameraDepthTexture_TexelSize;
+			// _CameraDepthTexture_TexelSize is already declared by URP 17
 
 
 			
@@ -1184,7 +1184,7 @@ Shader "SH_Vefects_VFX_URP_Fire_Flames_01"
 			sampler2D _Noise_01_Texture;
 			sampler2D _Noise_02_Texture;
 			sampler2D _TextureSample2;
-			uniform float4 _CameraDepthTexture_TexelSize;
+			// _CameraDepthTexture_TexelSize is already declared by URP 17
 
 
 			
@@ -1463,7 +1463,7 @@ Shader "SH_Vefects_VFX_URP_Fire_Flames_01"
 			sampler2D _Noise_01_Texture;
 			sampler2D _Noise_02_Texture;
 			sampler2D _TextureSample2;
-			uniform float4 _CameraDepthTexture_TexelSize;
+			// _CameraDepthTexture_TexelSize is already declared by URP 17
 
 
 			
@@ -1746,7 +1746,7 @@ Shader "SH_Vefects_VFX_URP_Fire_Flames_01"
 			sampler2D _Noise_01_Texture;
 			sampler2D _Noise_02_Texture;
 			sampler2D _TextureSample2;
-			uniform float4 _CameraDepthTexture_TexelSize;
+			// _CameraDepthTexture_TexelSize is already declared by URP 17
 
 
 			
