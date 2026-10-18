@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: FireReady::FireReady.Config.AudioCueTable
   cues:
   - id: 0
-    clip: {fileID: 8300000, guid: ce4bf8798f248cf4e9bbfd6fe4289cbd, type: 3}
+    clip: {fileID: 8300000, guid: 147afd8fc44bca54095fda4042245781, type: 3}
     category: 0
     volume: 0.7
     spatialBlend: 0
   - id: 19
-    clip: {fileID: 8300000, guid: 3e204758bbac943409a9c3901c0247e8, type: 3}
+    clip: {fileID: 8300000, guid: 15fdbf1a0fce2d34db39dab74f5eb3a2, type: 3}
     category: 0
     volume: 0.9
     spatialBlend: 0

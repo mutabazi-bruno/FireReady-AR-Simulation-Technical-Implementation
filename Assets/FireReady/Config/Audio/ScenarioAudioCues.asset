@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: FireReady::FireReady.Config.AudioCueTable
   cues:
   - id: 1
-    clip: {fileID: 8300000, guid: ff96803c89afd3348a601783b540d513, type: 3}
+    clip: {fileID: 8300000, guid: 0bb4bcbe4a4c15c4b9fb850c530bebb4, type: 3}
     category: 1
     volume: 0.8
     spatialBlend: 0
   - id: 2
-    clip: {fileID: 8300000, guid: 6b16f1df3623cf44bab4e76772a5c24f, type: 3}
+    clip: {fileID: 8300000, guid: 702ff12d3f5b20c4fb404401ee9a65c6, type: 3}
     category: 1
     volume: 0.9
     spatialBlend: 0
@@ -34,7 +34,7 @@ MonoBehaviour:
     volume: 0.6
     spatialBlend: 0.7
   - id: 5
-    clip: {fileID: 8300000, guid: 3b7a1b378f232b94180fa8d1430ccbd0, type: 3}
+    clip: {fileID: 8300000, guid: 14de55e058e9e5143b546a035e3b41bb, type: 3}
     category: 1
     volume: 1
     spatialBlend: 0
@@ -44,17 +44,17 @@ MonoBehaviour:
     volume: 0.8
     spatialBlend: 0
   - id: 7
-    clip: {fileID: 8300000, guid: 2ae4eb1dd27d6fc4896d632235b0a03a, type: 3}
+    clip: {fileID: 8300000, guid: da99e3740a584cd4cbe84c81c4648688, type: 3}
     category: 1
     volume: 0.8
     spatialBlend: 0
   - id: 8
-    clip: {fileID: 8300000, guid: 8e4b61b011b49a543a31eb7ceccaca96, type: 3}
+    clip: {fileID: 8300000, guid: 63f3dfe41e04a4b408920ba72f4acb6b, type: 3}
     category: 1
     volume: 0.8
     spatialBlend: 0
   - id: 9
-    clip: {fileID: 8300000, guid: 475891286ddb4304b86dd6b31ecbd1f2, type: 3}
+    clip: {fileID: 8300000, guid: 0c77d44fff1528e428dd4d4f9e2a87bf, type: 3}
     category: 1
     volume: 0.8
     spatialBlend: 0
@@ -74,27 +74,27 @@ MonoBehaviour:
     volume: 0.8
     spatialBlend: 0
   - id: 13
-    clip: {fileID: 8300000, guid: 373704d2103c87a49990d0f35a4d1c60, type: 3}
+    clip: {fileID: 8300000, guid: de179cb200a0947488d696577f3d9b76, type: 3}
     category: 1
     volume: 0.9
     spatialBlend: 0
   - id: 14
-    clip: {fileID: 8300000, guid: 7f51c338c47e6ee489f8cebc2d5b5188, type: 3}
+    clip: {fileID: 8300000, guid: 94bc8546fe222904c9fd6e0438c1b6fc, type: 3}
     category: 2
     volume: 1
     spatialBlend: 0
   - id: 15
-    clip: {fileID: 8300000, guid: 58b0985acb544ec48a4953ea7f567c2e, type: 3}
+    clip: {fileID: 8300000, guid: 447e97f44e7d0fd4eb6ddec82c319992, type: 3}
     category: 2
     volume: 1
     spatialBlend: 0
   - id: 16
-    clip: {fileID: 8300000, guid: 5db85a7b6d20030459f3c8ddb05e53fb, type: 3}
+    clip: {fileID: 8300000, guid: 5d200f78236708f4892a9235140f023c, type: 3}
     category: 1
     volume: 1
     spatialBlend: 0.8
   - id: 17
-    clip: {fileID: 8300000, guid: d5ae63d2a93263a43ad364708750a829, type: 3}
+    clip: {fileID: 8300000, guid: de00c5326b0ad2948826e4141b94ae36, type: 3}
     category: 1
     volume: 0.8
     spatialBlend: 0
@@ -104,7 +104,7 @@ MonoBehaviour:
     volume: 0.7
     spatialBlend: 0.8
   - id: 20
-    clip: {fileID: 8300000, guid: 838eda4fde30b044089e7ccbbd44df04, type: 3}
+    clip: {fileID: 8300000, guid: 34e1c70f54dd1fc459e994da95a274f2, type: 3}
     category: 1
     volume: 0.8
     spatialBlend: 0
