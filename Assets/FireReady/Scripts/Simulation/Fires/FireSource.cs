@@ -19,6 +19,7 @@ namespace FireReady.Simulation
         bool suppressedThisFrame;
         float outOfControlTime;
         bool beyondControlRaised;
+        float burnTime;
 
         public abstract FireClass FireClass { get; }
         public float Intensity => intensity;
@@ -27,6 +28,9 @@ namespace FireReady.Simulation
         public FireSpawnData Spawn { get; private set; }
         public bool IsSecondary { get; private set; }
         public float OutOfControlTime => outOfControlTime;
+
+        // How much this fire has burned so far, weighted by intensity. Drives scorch marks and charring.
+        public float BurnTime => burnTime;
 
         public bool IsBurning => state == FireState.Small || state == FireState.Growing || state == FireState.OutOfControl;
         public virtual bool IsPowerLive => false;
@@ -52,6 +56,7 @@ namespace FireReady.Simulation
             suppressedThisFrame = false;
             outOfControlTime = 0f;
             beyondControlRaised = false;
+            burnTime = 0f;
             base.ResetEntity();
         }
 
@@ -72,6 +77,7 @@ namespace FireReady.Simulation
                     intensity = Mathf.Min(100f, intensity + profile.growthRate * dt);
 
                 UpdateStateFromIntensity();
+                burnTime += dt * (0.4f + intensity / 100f);
 
                 if (state == FireState.OutOfControl)
                 {
