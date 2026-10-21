@@ -14,6 +14,8 @@ namespace FireReady.Config
             public string heading;
             [TextArea] public string text;
             public Sprite icon;
+            [Tooltip("Optional full-colour safety sign shown instead of the tinted icon.")]
+            public Sprite sign;
             public Color color = Color.white;
         }
 
@@ -22,6 +24,9 @@ namespace FireReady.Config
         {
             public string title;
             [TextArea(3, 8)] public string body;
+            [TextArea] public string tip;
+            [Tooltip("Light the items up one by one, for step-by-step pages like PASS.")]
+            public bool stepThrough;
             public List<Item> items = new List<Item>();
         }
 

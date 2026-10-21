@@ -32,3 +32,6 @@ MonoBehaviour:
   target: {fileID: 21300000, guid: 9a08ceb089d11fe49ba1987b319913e0, type: 3}
   infoIcon: {fileID: 21300000, guid: d9b6dd2c355e6dd4f8c09dd40486aa45, type: 3}
   extinguisher: {fileID: 21300000, guid: 3d094e70ca30eff47ab118e0663ba5cb, type: 3}
+  signSquare: {fileID: 21300000, guid: 5675aa7e8dbf38c40826f8e1058caef3, type: 3}
+  signCircle: {fileID: 21300000, guid: 51e5678ea0b0935408b65187d73cbae4, type: 3}
+  signTriangle: {fileID: 21300000, guid: 74bd7a2693f701545a58702563a2ad23, type: 3}

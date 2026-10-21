@@ -14,6 +14,11 @@ namespace FireReady.UI
         [SerializeField] Button clearButton;
         [SerializeField] int sessionsShown = 10;
 
+        [Header("Progress")]
+        [SerializeField] TMP_Text drillsText;
+        [SerializeField] TMP_Text completedText;
+        [SerializeField] TMP_Text averageText;
+
         protected override void BindButtons()
         {
             Bind(backButton, () => UI.ShowMainMenu());
@@ -51,6 +56,17 @@ namespace FireReady.UI
                 var selected = record;
                 if (row.Button != null) row.Button.onClick.AddListener(() => UI.ShowSessionDetail(selected));
             }
+
+            var all = Sim.Data.LoadRecent(Sim.Data.SessionCount);
+            int completed = 0, total = 0;
+            foreach (var record in all)
+            {
+                total += record.score;
+                if (record.Outcome == FireReady.Core.SessionOutcome.Completed) completed++;
+            }
+            if (drillsText != null) drillsText.text = all.Count.ToString();
+            if (completedText != null) completedText.text = completed.ToString();
+            if (averageText != null) averageText.text = all.Count > 0 ? Mathf.RoundToInt(total / (float)all.Count).ToString() : "--";
 
             SetActive(emptyText, sessions.Count == 0);
             if (clearButton != null) clearButton.interactable = sessions.Count > 0;

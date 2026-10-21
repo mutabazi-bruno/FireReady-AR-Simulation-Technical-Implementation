@@ -15,6 +15,11 @@ namespace FireReady.UI
         [SerializeField] GameObject unsupportedPanel;
         [SerializeField] TMP_Text unsupportedText;
 
+        [Header("Stats strip")]
+        [SerializeField] TMP_Text drillsText;
+        [SerializeField] TMP_Text bestText;
+        [SerializeField] TMP_Text lastText;
+
         protected override void BindButtons()
         {
             Bind(startButton, () => Sim.StartTraining());
@@ -44,6 +49,18 @@ namespace FireReady.UI
 
         void OnHistoryCleared(HistoryCleared evt) => RefreshLastSession();
 
+        void RefreshStats()
+        {
+            if (Sim == null || Sim.Data == null) return;
+            var sessions = Sim.Data.LoadRecent(Sim.Data.SessionCount);
+            int best = -1;
+            foreach (var record in sessions) best = Mathf.Max(best, record.score);
+
+            if (drillsText != null) drillsText.text = sessions.Count.ToString();
+            if (bestText != null) bestText.text = best >= 0 ? best.ToString() : "--";
+            if (lastText != null) lastText.text = sessions.Count > 0 ? UITheme.OutcomeTitle(sessions[0].Outcome) : "--";
+        }
+
         // NFR-09: a clear message instead of a crash on phones without ARCore.
         void RefreshSupport(bool supported, string message)
         {
@@ -54,6 +71,7 @@ namespace FireReady.UI
 
         void RefreshLastSession()
         {
+            RefreshStats();
             if (lastSessionText == null || Sim == null || Sim.Data == null) return;
 
             var recent = Sim.Data.LoadRecent(1);

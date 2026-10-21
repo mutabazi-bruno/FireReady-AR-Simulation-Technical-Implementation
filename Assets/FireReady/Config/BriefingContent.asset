@@ -16,77 +16,105 @@ MonoBehaviour:
   - title: Your goal
     body: A fire has started in a small workshop office. Three fires will start one
       after another, and you have four extinguishers on a stand.
+    tip: Most workplace fires start small, in a waste bin or at an overloaded socket.
+      What you do in the first minute decides how it ends.
+    stepThrough: 0
     items:
     - heading: Raise the alarm
-      text: Tap the red call point first so everyone is warned.
-      icon: {fileID: 21300000, guid: dab64efca8ca4df4abc258e29ff3007d, type: 3}
-      color: {r: 0.8980392, g: 0.20392157, b: 0.16470589, a: 1}
+      text: Pull the red call point first so everyone is warned.
+      icon: {fileID: 0}
+      sign: {fileID: 21300000, guid: eb40cf2e6ca27994db00e5a1d6a03282, type: 3}
+      color: {r: 1, g: 1, b: 1, a: 1}
     - heading: Put out each fire
       text: A paper bin, a fuel spill and an overloaded extension board.
-      icon: {fileID: 21300000, guid: 3f18390c4ec53cb41add00004a707db6, type: 3}
-      color: {r: 0.9411765, g: 0.3529412, b: 0.15686275, a: 1}
+      icon: {fileID: 0}
+      sign: {fileID: 21300000, guid: e8749496853dee342953859de4567d00, type: 3}
+      color: {r: 1, g: 1, b: 1, a: 1}
     - heading: Cut the power
       text: Switch off the breaker before you tackle the electrical fire.
-      icon: {fileID: 21300000, guid: c865e3aeffd2ecb4592620ff605eaeea, type: 3}
-      color: {r: 1, g: 0.5411765, b: 0, a: 1}
+      icon: {fileID: 0}
+      sign: {fileID: 21300000, guid: 3f27dd23e289bec4a8a6432d4e1d63c8, type: 3}
+      color: {r: 1, g: 1, b: 1, a: 1}
     - heading: Know when to leave
       text: If a fire gets out of control, walk to the EXIT and tap it.
-      icon: {fileID: 21300000, guid: 4fa7b3dfe1c4cb64dac9caddde800449, type: 3}
-      color: {r: 0.078431375, g: 0.72156864, b: 0.3529412, a: 1}
+      icon: {fileID: 0}
+      sign: {fileID: 21300000, guid: 806f2fff47d3c3448ba735c783152e4d, type: 3}
+      color: {r: 1, g: 1, b: 1, a: 1}
   - title: Pick the right extinguisher
     body: The coloured band on each extinguisher tells you what is inside.
+    tip: Real extinguishers list the fire classes they are safe for on the label.
+      Check it before you squeeze, every time.
+    stepThrough: 0
     items:
     - heading: Water (red)
       text: Paper, wood, fabric. Never on fuel or live electrics.
       icon: {fileID: 21300000, guid: 3d094e70ca30eff47ab118e0663ba5cb, type: 3}
+      sign: {fileID: 0}
       color: {r: 0.8392157, g: 0.15686275, b: 0.15686275, a: 1}
     - heading: Foam (cream)
       text: Paper and burning fuel. Not on live electrics.
       icon: {fileID: 21300000, guid: 3d094e70ca30eff47ab118e0663ba5cb, type: 3}
+      sign: {fileID: 0}
       color: {r: 0.94509804, g: 0.8901961, b: 0.70980394, a: 1}
     - heading: CO2 (black)
       text: 'Electrical and fuel fires. Weak on paper: it can reignite.'
       icon: {fileID: 21300000, guid: 3d094e70ca30eff47ab118e0663ba5cb, type: 3}
+      sign: {fileID: 0}
       color: {r: 0.75, g: 0.75, b: 0.75, a: 1}
     - heading: Dry powder (blue)
       text: Works on all three fires here. Use it as a backup.
       icon: {fileID: 21300000, guid: 3d094e70ca30eff47ab118e0663ba5cb, type: 3}
+      sign: {fileID: 0}
       color: {r: 0.3019608, g: 0.56078434, b: 0.8784314, a: 1}
   - title: 'PASS: using an extinguisher'
     body: 'Walk to the stand and tap an extinguisher to pick it up. Then:'
+    tip: The base of the fire is where the fuel is. Spraying the flames only pushes
+      them around.
+    stepThrough: 1
     items:
     - heading: Pull
       text: Tap the yellow pin, or press PULL PIN.
       icon: {fileID: 21300000, guid: 99103257c29331a46b2ba96d999ba545, type: 3}
+      sign: {fileID: 0}
       color: {r: 0.078431375, g: 0.72156864, b: 0.3529412, a: 1}
     - heading: Aim
       text: Point the phone at the BASE of the fire, not the flames.
       icon: {fileID: 21300000, guid: 9a08ceb089d11fe49ba1987b319913e0, type: 3}
+      sign: {fileID: 0}
       color: {r: 0.18431373, g: 0.54901963, b: 1, a: 1}
     - heading: Squeeze
       text: Hold the SQUEEZE button to spray.
       icon: {fileID: 21300000, guid: 3d094e70ca30eff47ab118e0663ba5cb, type: 3}
+      sign: {fileID: 0}
       color: {r: 0.9411765, g: 0.3529412, b: 0.15686275, a: 1}
     - heading: Sweep
       text: Move the phone slowly side to side across the base.
       icon: {fileID: 21300000, guid: 0d1aed9e1ce520d49a080272fab3da1b, type: 3}
+      sign: {fileID: 0}
       color: {r: 1, g: 0.5411765, b: 0, a: 1}
   - title: Stay safe
     body: 
+    tip: If one extinguisher is not enough, leave, close the door behind you and
+      call the fire service.
+    stepThrough: 0
     items:
     - heading: Keep 1 to 2.5 m away
       text: Closer is dangerous. Further away and the spray cannot reach.
       icon: {fileID: 21300000, guid: d2361adf4ea98f2458aa4e19825b5876, type: 3}
+      sign: {fileID: 0}
       color: {r: 1, g: 0.5411765, b: 0, a: 1}
     - heading: Wrong agent = worse fire
       text: Water spreads burning fuel. Water on live electrics is fatal.
       icon: {fileID: 21300000, guid: df2d29c973006d74aa4e41d3b17682d3, type: 3}
+      sign: {fileID: 0}
       color: {r: 0.8980392, g: 0.20392157, b: 0.16470589, a: 1}
     - heading: Extinguishers run out
       text: Each one lasts about 12 seconds of spraying.
       icon: {fileID: 21300000, guid: 71f439f3a7696f74d94f86ad4259cb7a, type: 3}
+      sign: {fileID: 0}
       color: {r: 0.18431373, g: 0.54901963, b: 1, a: 1}
     - heading: Walk around for real
       text: You will need to move around your room. Keep the floor clear.
       icon: {fileID: 21300000, guid: a14703f54fa5fbd47bb7f584997f670c, type: 3}
-      color: {r: 0.95686275, g: 0.95686275, b: 0.9490196, a: 1}
+      sign: {fileID: 0}
+      color: {r: 0.078431375, g: 0.72156864, b: 0.3529412, a: 1}

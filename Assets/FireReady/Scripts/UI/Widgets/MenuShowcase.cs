@@ -13,6 +13,9 @@ namespace FireReady.UI
         [SerializeField] Transform spinner;
         [SerializeField] float degreesPerSecond = 22f;
         [SerializeField] float bobHeight = 0.01f;
+        [SerializeField] SimulationStateId visibleIn = SimulationStateId.MainMenu;
+        [Tooltip("Optional camera that renders this showcase into a texture. Only runs while visible.")]
+        [SerializeField] Camera renderCamera;
 
         Vector3 spinnerHome;
 
@@ -20,6 +23,7 @@ namespace FireReady.UI
         {
             if (spinner != null) spinnerHome = spinner.localPosition;
             if (content != null) content.SetActive(false);
+            if (renderCamera != null) renderCamera.enabled = false;
         }
 
         void OnEnable()
@@ -34,7 +38,9 @@ namespace FireReady.UI
 
         void OnStateChanged(SimulationStateChanged evt)
         {
-            if (content != null) content.SetActive(evt.Current == SimulationStateId.MainMenu);
+            bool visible = evt.Current == visibleIn;
+            if (content != null) content.SetActive(visible);
+            if (renderCamera != null) renderCamera.enabled = visible;
         }
 
         void Update()

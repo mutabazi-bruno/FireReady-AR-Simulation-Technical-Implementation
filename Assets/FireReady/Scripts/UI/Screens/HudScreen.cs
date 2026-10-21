@@ -51,6 +51,7 @@ namespace FireReady.UI
         [Header("Evacuation (FR-19)")]
         [SerializeField] GameObject evacuateBanner;
         [SerializeField] TMP_Text evacuateText;
+        [SerializeField] Image dangerVignette;
 
         int outOfControlCount;
         Extinguisher held;
@@ -112,6 +113,17 @@ namespace FireReady.UI
             if (Sim == null) return;
 
             if (timerText != null) timerText.text = FormatTime(Sim.SessionTime);
+            if (dangerVignette != null)
+            {
+                bool danger = outOfControlCount > 0;
+                dangerVignette.enabled = danger;
+                if (danger)
+                {
+                    var c = theme.danger;
+                    c.a = 0.35f + Mathf.PingPong(Time.unscaledTime * 1.4f, 0.4f);
+                    dangerVignette.color = c;
+                }
+            }
             if (firesText != null) firesText.text = Sim.Entities.FiresRemaining.ToString();
 
             if (held != null)

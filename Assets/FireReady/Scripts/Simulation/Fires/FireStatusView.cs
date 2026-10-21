@@ -18,6 +18,9 @@ namespace FireReady.Simulation
         [SerializeField] Color growingColor = new Color(1f, 0.5f, 0.1f);
         [SerializeField] Color outOfControlColor = new Color(0.9f, 0.15f, 0.12f);
         [SerializeField] Color smoulderColor = new Color(0.6f, 0.6f, 0.6f);
+        [Tooltip("The label fades out when the camera is closer than this, so it never covers the view.")]
+        [SerializeField] float fadeStart = 1.3f;
+        [SerializeField] float fadeEnd = 0.8f;
 
         Camera viewer;
         FireState shownState = (FireState)(-1);
@@ -34,8 +37,16 @@ namespace FireReady.Simulation
 
             bool smouldering = fire.State == FireState.Extinguished && fire.HasPendingReignite;
             bool visible = fire.IsBurning || smouldering;
-            if (group != null) group.alpha = visible ? 1f : 0f;
-            if (!visible) return;
+
+            if (viewer == null) viewer = Camera.main;
+            float nearFade = 1f;
+            if (viewer != null)
+            {
+                float distance = Vector3.Distance(viewer.transform.position, transform.position);
+                nearFade = Mathf.InverseLerp(fadeEnd, fadeStart, distance);
+            }
+            if (group != null) group.alpha = visible ? nearFade : 0f;
+            if (!visible || nearFade <= 0f) return;
 
             if (fill != null) fill.fillAmount = smouldering ? 0.05f : fire.Intensity / 100f;
 
@@ -46,7 +57,6 @@ namespace FireReady.Simulation
                 RefreshLabel(smouldering);
             }
 
-            if (viewer == null) viewer = Camera.main;
             if (viewer != null)
             {
                 var toViewer = transform.position - viewer.transform.position;
@@ -66,7 +76,7 @@ namespace FireReady.Simulation
             }
             else
             {
-                text = $"{EnumText.FireClassName(fire.FireClass)} - {EnumText.FireStateName(fire.State)}";
+                text = $"{EnumText.FireClassName(fire.FireClass)}  ·  {EnumText.FireStateName(fire.State)}";
                 color = fire.State == FireState.OutOfControl ? outOfControlColor
                     : fire.State == FireState.Growing ? growingColor
                     : smallColor;

@@ -31,6 +31,25 @@ namespace FireReady.UI
         public Sprite infoIcon;
         public Sprite extinguisher;
 
+        [Header("Safety sign shapes (ISO 7010)")]
+        public Sprite signSquare;
+        public Sprite signCircle;
+        public Sprite signTriangle;
+
+        // Warning colours sit on a triangle, instructions on a circle, everything else on a square.
+        public Sprite SignShape(Color color, out bool triangle)
+        {
+            triangle = Close(color, warning) || Close(color, accent);
+            if (triangle && signTriangle != null) return signTriangle;
+            if (Close(color, info) && signCircle != null) return signCircle;
+            return signSquare;
+        }
+
+        static bool Close(Color a, Color b)
+        {
+            return Mathf.Abs(a.r - b.r) + Mathf.Abs(a.g - b.g) + Mathf.Abs(a.b - b.b) < 0.12f;
+        }
+
         public Color OutcomeColor(SessionOutcome outcome)
         {
             switch (outcome)

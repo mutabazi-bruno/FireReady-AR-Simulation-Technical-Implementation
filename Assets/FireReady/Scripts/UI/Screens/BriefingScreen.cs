@@ -17,9 +17,16 @@ namespace FireReady.UI
         [SerializeField] Button nextButton;
         [SerializeField] TMP_Text nextLabel;
         [SerializeField] Button skipButton;
+        [SerializeField] GameObject tipCard;
+        [SerializeField] TMP_Text tipText;
+        [SerializeField] TMP_Text watermark;
 
         BriefingContent content;
         int page;
+        readonly System.Collections.Generic.List<RowView> shownRows = new System.Collections.Generic.List<RowView>();
+        bool stepThrough;
+        float stepTimer;
+        int activeStep;
 
         int PageCount => content != null ? content.pages.Count : 0;
 
@@ -51,6 +58,16 @@ namespace FireReady.UI
         {
             content = evt.Briefing;
             ShowPage();
+        }
+
+        void Update()
+        {
+            if (!stepThrough) return;
+            stepTimer -= Time.unscaledDeltaTime;
+            if (stepTimer > 0f) return;
+            stepTimer = 1.3f;
+            activeStep = (activeStep + 1) % shownRows.Count;
+            for (int i = 0; i < shownRows.Count; i++) shownRows[i].SetEmphasis(i == activeStep);
         }
 
         void Back()
@@ -92,10 +109,23 @@ namespace FireReady.UI
             pageBody.text = current.body;
             pageBody.gameObject.SetActive(!string.IsNullOrEmpty(current.body));
 
+            shownRows.Clear();
             foreach (var item in current.items)
-                items.Add().Set(item.icon, item.color, item.heading, item.text);
+            {
+                var row = items.Add();
+                if (item.sign != null) row.SetSign(item.sign, item.heading, item.text);
+                else row.Set(item.icon, item.color, item.heading, item.text);
+                row.SetEmphasis(true);
+                shownRows.Add(row);
+            }
+            stepThrough = current.stepThrough && shownRows.Count > 1;
+            activeStep = -1;
+            stepTimer = 0f;
 
             pageCounter.text = $"BRIEFING {page + 1:00} / {PageCount:00}";
+            if (watermark != null) watermark.text = $"{page + 1:00}";
+            SetActive(tipCard, !string.IsNullOrEmpty(current.tip));
+            if (tipText != null) tipText.text = current.tip;
             nextLabel.text = page >= PageCount - 1 ? "Set up AR" : "Next";
             SetActive(skipButton, page < PageCount - 1);
         }
