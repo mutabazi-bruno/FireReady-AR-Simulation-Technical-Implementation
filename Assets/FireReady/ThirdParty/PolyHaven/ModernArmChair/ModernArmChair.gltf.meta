@@ -1,0 +1,49 @@
+fileFormatVersion: 2
+guid: ecb60f18e215c8f46b57919565006d6c
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 715df9372183c47e389bb6e19fbc3b52, type: 3}
+  editorImportSettings:
+    generateSecondaryUVSet: 0
+  importSettings:
+    nodeNameMethod: 1
+    animationMethod: 2
+    generateMipMaps: 1
+    texturesReadable: 0
+    defaultMinFilterMode: 9729
+    defaultMagFilterMode: 9729
+    anisotropicFilterLevel: 1
+  instantiationSettings:
+    mask: -1
+    layer: 0
+    skinUpdateWhenOffscreen: 1
+    lightIntensityFactor: 1
+    sceneObjectCreation: 2
+  assetDependencies:
+  - type: 0
+    originalUri: Assets\FireReady\ThirdParty\PolyHaven\ModernArmChair\ModernArmChair.bin
+    assetPath: Assets\FireReady\ThirdParty\PolyHaven\ModernArmChair\ModernArmChair.bin
+  - type: 1
+    originalUri: Assets\FireReady\ThirdParty\PolyHaven\ModernArmChair\textures\ModernArmChair_2_normal.jpg
+    assetPath: Assets\FireReady\ThirdParty\PolyHaven\ModernArmChair\textures\ModernArmChair_2_normal.jpg
+  - type: 1
+    originalUri: Assets\FireReady\ThirdParty\PolyHaven\ModernArmChair\textures\ModernArmChair_1_color.jpg
+    assetPath: Assets\FireReady\ThirdParty\PolyHaven\ModernArmChair\textures\ModernArmChair_1_color.jpg
+  - type: 1
+    originalUri: Assets\FireReady\ThirdParty\PolyHaven\ModernArmChair\textures\ModernArmChair_0_mr.jpg
+    assetPath: Assets\FireReady\ThirdParty\PolyHaven\ModernArmChair\textures\ModernArmChair_0_mr.jpg
+  - type: 1
+    originalUri: Assets\FireReady\ThirdParty\PolyHaven\ModernArmChair\textures\ModernArmChair_5_normal.jpg
+    assetPath: Assets\FireReady\ThirdParty\PolyHaven\ModernArmChair\textures\ModernArmChair_5_normal.jpg
+  - type: 1
+    originalUri: Assets\FireReady\ThirdParty\PolyHaven\ModernArmChair\textures\ModernArmChair_4_color.jpg
+    assetPath: Assets\FireReady\ThirdParty\PolyHaven\ModernArmChair\textures\ModernArmChair_4_color.jpg
+  - type: 1
+    originalUri: Assets\FireReady\ThirdParty\PolyHaven\ModernArmChair\textures\ModernArmChair_3_mr.jpg
+    assetPath: Assets\FireReady\ThirdParty\PolyHaven\ModernArmChair\textures\ModernArmChair_3_mr.jpg
+  reportItems: []

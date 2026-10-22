@@ -1,0 +1,241 @@
+{
+ "asset": {
+  "generator": "Khronos glTF Blender I/O v5.1.19",
+  "version": "2.0"
+ },
+ "scene": 0,
+ "scenes": [
+  {
+   "name": "Scene",
+   "nodes": [
+    4
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "mesh": 0,
+   "name": "Object_4"
+  },
+  {
+   "children": [
+    0
+   ],
+   "name": "SM_Yangin_Tupu_0",
+   "translation": [
+    0,
+    0.06418168544769287,
+    0
+   ]
+  },
+  {
+   "children": [
+    1
+   ],
+   "name": "GLTF_SceneRootNode",
+   "rotation": [
+    0.70710688829422,
+    0,
+    0,
+    0.7071066498756409
+   ]
+  },
+  {
+   "children": [
+    2
+   ],
+   "name": "root"
+  },
+  {
+   "children": [
+    3
+   ],
+   "name": "Sketchfab_model",
+   "rotation": [
+    -0.70710688829422,
+    0,
+    0,
+    0.7071066498756409
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "doubleSided": true,
+   "name": "M_Yangin_Tupu",
+   "normalTexture": {
+    "index": 0,
+    "texCoord": 0
+   },
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 1
+    },
+    "metallicRoughnessTexture": {
+     "index": 2,
+     "texCoord": 1
+    }
+   }
+  }
+ ],
+ "meshes": [
+  {
+   "name": "Object_0",
+   "primitives": [
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2,
+      "TEXCOORD_1": 3,
+      "TEXCOORD_2": 4,
+      "TEXCOORD_3": 5
+     },
+     "indices": 6,
+     "material": 0
+    }
+   ]
+  }
+ ],
+ "textures": [
+  {
+   "sampler": 0,
+   "source": 0
+  },
+  {
+   "sampler": 0,
+   "source": 1
+  },
+  {
+   "sampler": 0,
+   "source": 2
+  }
+ ],
+ "images": [
+  {
+   "mimeType": "image/png",
+   "name": "FireExtinguisher_2_normal",
+   "uri": "textures/FireExtinguisher_2_normal.png"
+  },
+  {
+   "mimeType": "image/png",
+   "name": "FireExtinguisher_0_color",
+   "uri": "textures/FireExtinguisher_0_color.png"
+  },
+  {
+   "mimeType": "image/png",
+   "name": "FireExtinguisher_1_mr",
+   "uri": "textures/FireExtinguisher_1_mr.png"
+  }
+ ],
+ "accessors": [
+  {
+   "bufferView": 0,
+   "componentType": 5126,
+   "count": 2883,
+   "max": [
+    0.42094770073890686,
+    1.2303602695465088,
+    0.5922548174858093
+   ],
+   "min": [
+    -0.43114492297172546,
+    -1.8721323013305664,
+    -0.6118788123130798
+   ],
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 1,
+   "componentType": 5126,
+   "count": 2883,
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 2,
+   "componentType": 5126,
+   "count": 2883,
+   "type": "VEC2"
+  },
+  {
+   "bufferView": 3,
+   "componentType": 5126,
+   "count": 2883,
+   "type": "VEC2"
+  },
+  {
+   "bufferView": 4,
+   "componentType": 5126,
+   "count": 2883,
+   "type": "VEC2"
+  },
+  {
+   "bufferView": 5,
+   "componentType": 5126,
+   "count": 2883,
+   "type": "VEC2"
+  },
+  {
+   "bufferView": 6,
+   "componentType": 5123,
+   "count": 7380,
+   "type": "SCALAR"
+  }
+ ],
+ "bufferViews": [
+  {
+   "buffer": 0,
+   "byteLength": 34596,
+   "byteOffset": 0,
+   "target": 34962
+  },
+  {
+   "buffer": 0,
+   "byteLength": 34596,
+   "byteOffset": 34596,
+   "target": 34962
+  },
+  {
+   "buffer": 0,
+   "byteLength": 23064,
+   "byteOffset": 69192,
+   "target": 34962
+  },
+  {
+   "buffer": 0,
+   "byteLength": 23064,
+   "byteOffset": 92256,
+   "target": 34962
+  },
+  {
+   "buffer": 0,
+   "byteLength": 23064,
+   "byteOffset": 115320,
+   "target": 34962
+  },
+  {
+   "buffer": 0,
+   "byteLength": 23064,
+   "byteOffset": 138384,
+   "target": 34962
+  },
+  {
+   "buffer": 0,
+   "byteLength": 14760,
+   "byteOffset": 161448,
+   "target": 34963
+  }
+ ],
+ "samplers": [
+  {
+   "magFilter": 9729,
+   "minFilter": 9987
+  }
+ ],
+ "buffers": [
+  {
+   "byteLength": 176208,
+   "uri": "FireExtinguisher.bin"
+  }
+ ]
+}
