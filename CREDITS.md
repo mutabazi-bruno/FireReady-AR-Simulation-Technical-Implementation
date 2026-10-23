@@ -55,7 +55,7 @@ or reduced in Blender so they run well on a phone; those changes are listed in t
 | Barlow, Barlow Condensed | Jeremy Tribby | [Google Fonts](https://fonts.google.com/specimen/Barlow) | SIL Open Font License | Body text and headings |
 | JetBrains Mono | JetBrains | [Google Fonts](https://fonts.google.com/specimen/JetBrains+Mono) | SIL Open Font License | Timer, score and labels |
 | UI Pack - Space Expansion | Kenney | [kenney.nl](https://kenney.nl/assets/ui-pack-space-expansion) | CC0 | Card, button and folder-tab plates. Recoloured to dark steel, and the tab was cut out of a header plate so it can take any colour. |
-| Material Symbols (Sharp) | Google | [GitHub](https://github.com/google/material-design-icons) | Apache 2.0 | All UI icons, rendered from the font |
+| Material Symbols (Sharp) | Google | [GitHub](https://github.com/google/material-design-icons) | Apache 2.0 | All UI icons, rendered from the font, and the extinguisher and flame on the app icon |
 | ISO 7010 safety signs F001, F005, E002, W012 | Wikimedia Commons contributors | [Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:ISO_7010_safety_signs) | Public domain | Briefing signs, and the signs on the fire point, alarm post and breaker in the scene |
 
 ## Made for this project
