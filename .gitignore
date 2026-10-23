@@ -111,3 +111,9 @@ InitTestScene*.unity*
 # IDE settings
 .vscode/
 .idea/
+
+# Unity crash recovery scenes and local XR Simulation settings
+/[Aa]ssets/_Recovery/
+/[Aa]ssets/_Recovery.meta
+/[Aa]ssets/XR/Temp/
+/[Aa]ssets/XR/Temp.meta
