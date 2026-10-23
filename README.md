@@ -101,9 +101,9 @@ Open Window > General > Test Runner and run the EditMode tests. They cover the a
 
 ## Links
 
-- Technical documentation (PDF): coming soon
-- Video demonstration: coming soon
-- Android build (APK): coming soon
+- [Technical documentation (PDF)](https://drive.google.com/file/d/1Q8yXRssK1xJ9aVwF8c_g8eKmqhXd0y9v/view?usp=sharing)
+- [Video demonstration (YouTube)](https://www.youtube.com/watch?v=NTgZkTT5YYE)
+- [Android build (APK)](https://drive.google.com/drive/folders/1eUoCGpVJiGRD3p4vDVi4SDVhMdfe-F2g?usp=sharing)
 - [CREDITS.md](CREDITS.md): every third-party asset with its author, source and license
 
 ## Credits
