@@ -35,6 +35,7 @@ or reduced in Blender so they run well on a phone; those changes are listed in t
 | Asset | Author | Source | License | Used for |
 |---|---|---|---|---|
 | Free Fire VFX (URP) | Vefects | [itch.io](https://vefects.itch.io/free-fire-vfx-unity-urp) | Free pack, terms on the itch.io page | Fire and smoke for the paper bin, fuel spill and extension board. The flames shader was edited to remove a variable URP 17 already declares, which stopped it compiling. |
+| Particle Pack (Electrical Sparks, Steam, Smoke Effect, Tiny Explosion) | Unity Technologies | [Unity Asset Store](https://assetstore.unity.com/packages/vfx/particles/particle-pack-127325) | Standard Unity Asset Store EULA (free) | Sparks from the overloaded power strip, steam when a fire goes out, smoke when one reignites, and the flare-up when water hits burning fuel. Only these four effects and their materials are kept in the project. |
 
 ## Audio
 
@@ -47,17 +48,19 @@ or reduced in Blender so they run well on a phone; those changes are listed in t
 | Industrial Steam Pipes Hiss Hum | kyles | [Freesound](https://freesound.org/people/kyles/sounds/453462/) | CC0 | Steam when a fire goes out (1.8 s section) |
 | J7 Fire Extinguisher | iamgiorgio | [Freesound](https://freesound.org/s/371839/) | See the Freesound page | Extinguisher spray loop (1.2 s section, looped) |
 
-## Fonts and icons
+## UI, fonts and icons
 
 | Asset | Author | Source | License | Used for |
 |---|---|---|---|---|
 | Barlow, Barlow Condensed | Jeremy Tribby | [Google Fonts](https://fonts.google.com/specimen/Barlow) | SIL Open Font License | Body text and headings |
 | JetBrains Mono | JetBrains | [Google Fonts](https://fonts.google.com/specimen/JetBrains+Mono) | SIL Open Font License | Timer, score and labels |
+| UI Pack - Space Expansion | Kenney | [kenney.nl](https://kenney.nl/assets/ui-pack-space-expansion) | CC0 | Card, button and folder-tab plates. Recoloured to dark steel, and the tab was cut out of a header plate so it can take any colour. |
 | Material Symbols (Sharp) | Google | [GitHub](https://github.com/google/material-design-icons) | Apache 2.0 | All UI icons, rendered from the font |
+| ISO 7010 safety signs F001, F005, E002, W012 | Wikimedia Commons contributors | [Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:ISO_7010_safety_signs) | Public domain | Briefing signs, and the signs on the fire point, alarm post and breaker in the scene |
 
 ## Made for this project
 
-UI shapes, hazard stripes and corner brackets, the spray and steam particle textures, the alarm
+UI shapes, background grid and corner brackets, the spray and steam particle textures, the alarm
 post, breaker switch, exit door frame, fuel can and extinguisher stand, and these sounds: spray
 sizzle, distance warning beep, session success and fail jingles.
 

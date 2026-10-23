@@ -50,13 +50,13 @@ namespace FireReady.UI
             var sim = SimulationManager.Instance;
             text.Clear();
             text.Append("FPS ").Append((frames / Mathf.Max(elapsed, 0.0001f)).ToString("0"))
-                .Append("  worst ").Append((worstFrame * 1000f).ToString("0")).Append(" ms\n");
+                .Append("  worst ").Append((worstFrame * 1000f).ToString("0")).Append(" ms");
             if (sim != null)
             {
-                text.Append("State ").Append(sim.CurrentState).Append('\n');
-                text.Append("Addressables handles ").Append(sim.Assets.OpenHandles).Append('\n');
-                text.Append("Last: ").Append(lastAssetAction).Append('\n');
-                text.Append("Pools ").Append(sim.Pools.DescribeStats());
+                text.Append("  |  ").Append(sim.CurrentState);
+                text.Append("  |  handles ").Append(sim.Assets.OpenHandles).Append('\n');
+                text.Append("Last: ").Append(lastAssetAction);
+                text.Append("  |  pools ").Append(sim.Pools.DescribeStats());
             }
 
             if (label != null) label.SetText(text);
