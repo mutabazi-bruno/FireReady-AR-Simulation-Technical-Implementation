@@ -99,10 +99,12 @@ Finished and abandoned sessions are saved to `sessions.json` in `Application.per
 
 Open Window > General > Test Runner and run the EditMode tests. They cover the agent and fire class table, fire growth and reignition, the score deductions, the event bus and the save file recovery.
 
-## Documentation
+## Links
 
-- `Docs/FireReady_Technical_Documentation.pdf`: the technical document for this assignment (architecture, patterns, Addressables, persistence, audio and the deviations from the SRS).
-- `CREDITS.md`: every third-party asset with its author, source and license.
+- Technical documentation (PDF): coming soon
+- Video demonstration: coming soon
+- Android build (APK): coming soon
+- [CREDITS.md](CREDITS.md): every third-party asset with its author, source and license
 
 ## Credits
 
